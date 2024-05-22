@@ -48,15 +48,15 @@ public class TransposeManager {
         }else {
             if(semitones>0) {
                 if(null != pianoKeyBoard.get(key+1)) {
-                    note = new Note(key + 1, newValue - pianoKeyBoard.get(key).getLast());
+                    note = new Note(key + 1, newValue - pianoKeyBoard.get(key).get(pianoKeyBoard.get(key).size() - 1));
                 }else{
-                    note = new Note(key, pianoKeyBoard.get(key).getLast());
+                    note = new Note(key, pianoKeyBoard.get(key).get(pianoKeyBoard.get(key).size() - 1));
                 }
             } else {
                 if(null != pianoKeyBoard.get(key-1)) {
-                    note = new Note(key - 1, pianoKeyBoard.get(key - 1).getLast() + newValue);
+                    note = new Note(key - 1, pianoKeyBoard.get(key - 1).get(pianoKeyBoard.get(key).size() - 1) + newValue);
                 }else{
-                    note = new Note(key, pianoKeyBoard.get(key).getFirst());
+                    note = new Note(key, pianoKeyBoard.get(key).get(0));
                 }
             }
         }
