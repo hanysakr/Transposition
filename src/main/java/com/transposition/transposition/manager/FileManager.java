@@ -1,4 +1,4 @@
-package com.transposition.transposition.businessLogicManagers;
+package com.transposition.transposition.manager;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.transposition.transposition.model.Note;
@@ -30,7 +30,7 @@ public class FileManager {
     }
 
     public void createFile(final List<Note> modifiedNote) throws IOException {
-        List<List<Integer>> output = modifiedNote.stream().map(e-> List.of(e.getX(), e.getY())).collect(Collectors.toList());
+        List<List<Integer>> output = modifiedNote.stream().map(e-> List.of(e.getOctave(), e.getSemitone())).collect(Collectors.toList());
         objectMapper.writeValue(new File((String) mapArgs.get(OUTPUT_FILE)), output);
     }
 }

@@ -1,24 +1,24 @@
 package com.transposition.transposition.model;
 
 public class Note {
-    public Note(int x, int y) {
-        this.x = x;
-        this.y = y;
+    public Note(int octave, int semitone) {
+        this.octave = octave;
+        this.semitone = semitone;
     }
 
-    private int x = 0;
-    private int y = 0;
+    private int octave = 0;
+    private int semitone = 0;
 
-    public int getX() {
-        return x;
+    public int getOctave() {
+        return octave;
     }
 
-    public int getY() {
-        return y;
+    public int getSemitone() {
+        return semitone;
     }
 
     @Override
     public String toString() {
-        return "{" + x + "," + y + "}";
+        return "{" + octave + "," + semitone + "}";
     }
 }

@@ -2,7 +2,7 @@ package com.transposition.transposition;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.transposition.transposition.businessLogicManagers.TransposeManager;
+import com.transposition.transposition.manager.TransposeManager;
 import com.transposition.transposition.model.Note;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
