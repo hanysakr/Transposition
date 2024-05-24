@@ -1,7 +1,7 @@
 package com.transposition.transposition;
 
-import com.transposition.transposition.businessLogicManagers.FileManager;
-import com.transposition.transposition.businessLogicManagers.TransposeManager;
+import com.transposition.transposition.manager.FileManager;
+import com.transposition.transposition.manager.TransposeManager;
 import com.transposition.transposition.model.Note;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

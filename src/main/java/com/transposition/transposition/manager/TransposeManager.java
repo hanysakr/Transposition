@@ -1,4 +1,4 @@
-package com.transposition.transposition.businessLogicManagers;
+package com.transposition.transposition.manager;
 
 import com.transposition.transposition.model.Note;
 
@@ -25,7 +25,7 @@ public class TransposeManager {
          *          move semitones value ( check piano for next move)
          * */
         musicNote.stream().forEach(note-> {
-            modifiedNote.add(calculate(note.getX(),note.getY() , semitones));
+            modifiedNote.add(calculate(note.getOctave(),note.getSemitone() , semitones));
         });
 
         //System.out.println(modifiedNote);
